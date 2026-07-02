@@ -3,7 +3,7 @@
     "lang": "pl",
     "label": "PL",
     "siteName": "IN2 Branding",
-    "tagline": "Ekskluzywne prezenty firmowe i produkty brandowane"
+    "tagline": "Ekskluzywne prezenty firmowe i produkty z logo Twojej marki"
   },
   "nav": {
     "home": "Strona główna",
@@ -13,69 +13,69 @@
     "cta": "Rozpocznij projekt"
   },
   "seo": {
-    "home": { "title": "IN2 Branding — Ekskluzywne prezenty firmowe i produkty brandowane", "description": "Luksusowe rozwiązania co-brandingowe, dopracowane doświadczenia prezentowe i premium produkty personalizowane projektowane wokół Twojej marki." },
-    "howWeWork": { "title": "Jak pracujemy — IN2 Branding", "description": "Od wizji do realizacji: dobór produktów, koncepcje brandingowe, projekt opakowań, produkcja i logistyka — kompleksowo zarządzane." },
-    "portfolio": { "title": "Nasze realizacje — IN2 Branding", "description": "Przemyślany branding. Produkty premium. Realny efekt. Wybór produktów brandowanych i zestawów prezentowych IN2." },
-    "contact": { "title": "Kontakt — IN2 Branding", "description": "Opowiedz nam o swojej wizji. Przygotujemy w pełni spersonalizowane, premium rozwiązanie prezentowe dopasowane do Twojej marki." }
+    "home": { "title": "IN2 Branding — Ekskluzywne prezenty firmowe i produkty z logo Twojej marki", "description": "Luksusowe rozwiązania co-brandingowe, starannie dobrane zestawy prezentowe oraz produkty premium stworzone z myślą o Twojej marce." },
+    "howWeWork": { "title": "Jak pracujemy — IN2 Branding", "description": "Wy mówicie nam o pomyśle, wizji i budżecie — my zamieniamy to w rzeczywistość: produkt, branding i opakowanie. Zajmujemy się wszystkim od pomysłu do wykonania." },
+    "portfolio": { "title": "Przykłady naszych realizacji — IN2 Branding", "description": "Przemyślany branding. Produkty premium. Prawdziwy efekt. Przykłady realizacji IN2 Branding." },
+    "contact": { "title": "Skontaktuj się z nami — IN2 Branding", "description": "Opowiedz nam o swojej wizji. Przygotujemy w pełni spersonalizowane, premium rozwiązanie marketingowe dopasowane do Twojej marki." }
   },
   "hero": {
-    "kicker": "Ekskluzywne prezenty firmowe i produkty brandowane",
-    "title": "Luksusowy branding projektowany wokół Ciebie",
-    "subtitle": "Luksusowe rozwiązania co-brandingowe, dopracowane doświadczenia prezentowe i premium produkty personalizowane projektowane wokół Twojej marki.",
+    "kicker": "IN2 Branding",
+    "title": "Ekskluzywne prezenty firmowe i produkty z logo Twojej marki",
+    "subtitle": "Luksusowe rozwiązania co-brandingowe, starannie dobrane zestawy prezentowe oraz produkty premium stworzone z myślą o Twojej marce.",
     "primaryCta": "Stwórzmy coś wyjątkowego",
     "secondaryCta": "Zobacz realizacje"
   },
   "whoWeAre": {
     "title": "Kim jesteśmy",
     "items": [
-      { "text": "Jesteśmy polską firmą specjalizującą się w premium i wysokiej jakości brandowanych produktach marketingowych, dopasowanych do wizji każdego klienta." },
-      { "text": "W IN2 działamy jako zewnętrzny, kreatywny partner marketingowy — pomagamy markom przekształcać pomysły w zapadające w pamięć, pięknie wykonane doświadczenia, które ludzie naprawdę chcą zatrzymać, używać i pamiętać." },
-      { "text": "W przeciwieństwie do tradycyjnych dostawców gadżetów skupionych na tanich, powtarzalnych produktach, wierzymy, że niskiej jakości materiały szkodzą wizerunkowi marki. Na dzisiejszym rynku generyczne smycze i jednorazowe kubki z logo nie są już skutecznym marketingiem — są anty-reklamą." },
-      { "text": "Dlatego pracujemy wyłącznie ze starannie wybranymi produktami premium, eleganckimi technikami brandingu i dopracowanymi rozwiązaniami opakowaniowymi, zaprojektowanymi tak, by podnieść sposób postrzegania Twojej marki." }
+      { "text": "Jesteśmy polską firmą specjalizującą się w tworzeniu wysokiej jakości produktów marketingowych dopasowanych do wizji naszych klientów." },
+      { "text": "W IN2 Branding działamy jako zewnętrzny partner marketingowy — pomagamy firmom zmieniać pomysły w piękne gadżety, które klienci naprawdę chcą zachować i używać." },
+      { "text": "W przeciwieństwie do większości dostawców gadżetów my nie jesteśmy nastawieni na tanie, masowe produkty. Jesteśmy przekonani, że niska jakość produktów marketingowych może szkodzić Państwa marce — na dzisiejszym rynku tanie smycze i jednorazowe gadżety nie są już skutecznym narzędziem marketingowym — są antyreklamą." },
+      { "text": "Współpracujemy wyłącznie ze starannie wyselekcjonowanymi producentami premium, oferujemy przemyślane techniki personalizacji oraz dopracowane rozwiązania opakowaniowe, które podkreślają wartość Twojej marki na każdym etapie." }
     ],
-    "highlight": "Bo silne marki zasługują na coś więcej niż jednorazowe gadżety."
+    "highlight": "Wierzymy, że silne marki zasługują na więcej niż jednorazowe gadżety."
   },
   "whyIn2": {
-    "title": "Dlaczego IN2",
+    "title": "Dlaczego My?",
     "items": [
-      "Wyłącznie produkty premium",
+      "Tylko produkty premium",
       "Eleganckie techniki brandingu",
       "W pełni spersonalizowane koncepcje",
-      "Estetyka inspirowana retailem",
-      "Kompleksowe zarządzanie projektem",
-      "Ekskluzywna prezentacja i opakowania"
+      "Estetyka inspirowana detalem i stylem retail",
+      "Kompleksowa obsługa projektu od początku do końca",
+      "Ekskluzywna prezentacja i dopracowane opakowania"
     ]
   },
   "howWeWork": {
     "title": "Jak pracujemy",
     "steps": [
-      { "title": "Ty dzielisz się wizją", "text": "Przekazujesz wizję, okazję i budżet." },
-      { "title": "My realizujemy — kompleksowo", "text": "Dostarczamy dobór produktów, koncepcje brandingowe, projekt opakowań, produkcję i logistykę — kompleksowo zarządzane od początku do końca." }
+      { "title": "Wy dzielicie się pomysłem", "text": "Wy mówicie nam o swoim pomyśle, wizji oraz budżecie dla projektu." },
+      { "title": "My realizujemy projekt", "text": "My ten pomysł zamieniamy w rzeczywistość: proponujemy odpowiedni do założeń produkt, zajmujemy się brandingiem, projektujemy opakowanie. Zajmujemy się wszystkim od pomysłu do wykonania." }
     ]
   },
   "giftSets": {
-    "title": "Zestawy prezentowe, które promują Twoją markę",
-    "description": "Projektujemy premium zestawy prezentowe, które łączą przemyślaną kompozycję, eleganckie opakowanie i Twoją markę — tworząc trwałe wrażenia wykraczające daleko poza sam moment.",
+    "title": "Zestawy prezentowe, które budują markę",
+    "description": "Projektujemy zestawy prezentowe premium, które łączą starannie dobrane produkty, eleganckie opakowania i Twoją markę.",
     "items": [
-      "W pełni spersonalizowane Twoim brandingiem",
-      "Wyselekcjonowane produkty premium odzwierciedlające Twoje wartości",
+      "Pełna personalizacja z Twoim brandingiem",
+      "Starannie dobrane produkty premium odzwierciedlające Twoje wartości",
       "Idealne dla klientów, partnerów i pracowników",
-      "Elegancka prezentacja, która mówi w imieniu Twojej marki"
+      "Do każdego prezentu dołączamy personalizowaną wiadomość od Twojej marki dla osoby obdarowanej"
     ],
-    "highlight": "To więcej niż prezent. To doświadczenie Twojej marki."
+    "highlight": "Aby efekt prezentu był jeszcze mocniejszy — możemy dodać do niego zapach, dający niesamowity efekt przy otwieraniu."
   },
   "ourWork": {
-    "title": "Nasze realizacje",
-    "subtitle": "Przemyślany branding. Produkty premium. Realny efekt.",
-    "intro": "Wybór produktów brandowanych, zapachowych akcentów i dopracowanych zestawów prezentowych stworzonych dla marek, którym zależy na tym, jak są postrzegane."
+    "title": "Przykłady naszych realizacji",
+    "subtitle": "Przemyślany branding. Produkty premium. Prawdziwy efekt.",
+    "intro": "Wybór produktów z logo Twojej marki, akcentów zapachowych i starannie dobranych zestawów prezentowych, stworzonych dla marek, którym zależy na tym, jak są postrzegane."
   },
   "cta": {
     "title": "Stwórzmy coś wyjątkowego",
-    "description": "Opowiedz nam o swojej wizji. Przygotujemy w pełni spersonalizowane, premium rozwiązanie prezentowe dopasowane do Twojej marki.",
+    "description": "Opowiedz nam o swojej wizji. Przygotujemy w pełni spersonalizowane, premium rozwiązanie marketingowe dopasowane do Twojej marki.",
     "button": "Skontaktuj się"
   },
   "contact": {
-    "title": "Kontakt",
+    "title": "Skontaktuj się z nami",
     "intro": "Opowiedz nam o swojej wizji — odpowiadamy w ciągu jednego dnia roboczego.",
     "person": "Aleksandra Stan",
     "role": "Opiekun klienta",
@@ -87,7 +87,7 @@
     "website": "www.in2scentedart.com"
   },
   "footer": {
-    "tagline": "Ekskluzywne prezenty firmowe i produkty brandowane.",
+    "tagline": "Ekskluzywne prezenty firmowe i produkty z logo Twojej marki.",
     "rights": "Wszelkie prawa zastrzeżone.",
     "made": "Projektowane wokół Twojej marki."
   },
