@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.in2scentedart.com',
+  site: 'https://in2branding.pl',
   i18n: {
     locales: ['pl', 'en', 'ro'],
     defaultLocale: 'pl',
