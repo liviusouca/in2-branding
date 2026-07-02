@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "lang": "ro",
+    "label": "RO",
+    "siteName": "IN2 Branding",
+    "tagline": "Cadouri corporate premium și produse personalizate"
+  },
+  "nav": {
+    "home": "Acasă",
+    "howWeWork": "Cum lucrăm",
+    "portfolio": "Portofoliu",
+    "contact": "Contact",
+    "cta": "Începe un proiect"
+  },
+  "seo": {
+    "home": { "title": "IN2 Branding — Cadouri corporate premium și produse personalizate", "description": "Soluții de co-branding de lux, experiențe de cadou curatoriate și produse premium personalizate, concepute în jurul brandului tău." },
+    "howWeWork": { "title": "Cum lucrăm — IN2 Branding", "description": "De la viziune la livrare: selecție de produse, concepte de branding, design de ambalaj, producție și logistică — gestionate integral." },
+    "portfolio": { "title": "Lucrările noastre — IN2 Branding", "description": "Branding atent gândit. Produse premium. Impact real. O selecție de produse personalizate și seturi cadou realizate de IN2." },
+    "contact": { "title": "Contact — IN2 Branding", "description": "Spune-ne despre viziunea ta. Pregătim o soluție de cadou premium complet personalizată, adaptată brandului tău." }
+  },
+  "hero": {
+    "kicker": "Cadouri corporate premium și produse personalizate",
+    "title": "Branding de lux, conceput în jurul tău",
+    "subtitle": "Soluții de co-branding de lux, experiențe de cadou curatoriate și produse premium personalizate, concepute în jurul brandului tău.",
+    "primaryCta": "Să creăm ceva excepțional",
+    "secondaryCta": "Vezi lucrările"
+  },
+  "whoWeAre": {
+    "title": "Cine suntem",
+    "items": [
+      { "text": "Suntem o companie poloneză specializată în produse de marketing premium, de înaltă calitate, personalizate după viziunea fiecărui client." },
+      { "text": "La IN2 acționăm ca un partener creativ de marketing extern — ajutăm brandurile să transforme ideile în experiențe memorabile, frumos realizate, pe care oamenii chiar vor să le păstreze, să le folosească și să și le amintească." },
+      { "text": "Spre deosebire de furnizorii tradiționali de promoționale, axați pe produse ieftine și repetitive, credem că materialele de slabă calitate dăunează percepției brandului. Pe piața de azi, lanyardele generice și cănile de unică folosință cu logo nu mai sunt marketing eficient — sunt anti-publicitate." },
+      { "text": "De aceea lucrăm exclusiv cu produse premium atent selectate, tehnici elegante de branding și soluții de ambalare rafinate, concepute pentru a ridica modul în care este perceput brandul tău." }
+    ],
+    "highlight": "Pentru că brandurile puternice merită mai mult decât gadgeturi de unică folosință."
+  },
+  "whyIn2": {
+    "title": "De ce IN2",
+    "items": [
+      "Doar produse premium",
+      "Tehnici elegante de branding",
+      "Concepte complet personalizate",
+      "Estetică inspirată din retail",
+      "Management de proiect de la cap la coadă",
+      "Prezentare și ambalare de top"
+    ]
+  },
+  "howWeWork": {
+    "title": "Cum lucrăm",
+    "steps": [
+      { "title": "Tu împărtășești viziunea", "text": "Ne oferi viziunea, ocazia și bugetul." },
+      { "title": "Noi livrăm, complet gestionat", "text": "Livrăm selecția produselor, conceptele de branding, designul de ambalaj, producția și logistica — gestionate integral, de la început până la sfârșit." }
+    ]
+  },
+  "giftSets": {
+    "title": "Seturi cadou care îți promovează brandul",
+    "description": "Concepem seturi cadou premium care îmbină curatoria atentă, ambalajul elegant și brandul tău — creând impresii de durată care merg mult dincolo de moment.",
+    "items": [
+      "Complet personalizate cu brandul tău",
+      "Produse premium curatoriate care îți reflectă valorile",
+      "Perfecte pentru clienți, parteneri și angajați",
+      "Prezentare elegantă care vorbește în numele brandului tău"
+    ],
+    "highlight": "Mai mult decât un cadou. Este experiența brandului tău."
+  },
+  "ourWork": {
+    "title": "Lucrările noastre",
+    "subtitle": "Branding atent gândit. Produse premium. Impact real.",
+    "intro": "O selecție de produse personalizate, piese parfumate și seturi cadou curatoriate, create pentru branduri cărora le pasă de cum sunt percepute."
+  },
+  "cta": {
+    "title": "Să creăm ceva excepțional",
+    "description": "Spune-ne despre viziunea ta. Pregătim o soluție de cadou premium complet personalizată, adaptată brandului tău.",
+    "button": "Ia legătura"
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Spune-ne despre viziunea ta — răspundem într-o zi lucrătoare.",
+    "person": "Aleksandra Stan",
+    "role": "Partener de client",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Telefon",
+    "followLabel": "Urmărește-ne",
+    "email": "aleksandra.stan@in2consulting.pl",
+    "phone": "+48 509 919 558",
+    "website": "www.in2scentedart.com"
+  },
+  "footer": {
+    "tagline": "Cadouri corporate premium și produse personalizate.",
+    "rights": "Toate drepturile rezervate.",
+    "made": "Conceput în jurul brandului tău."
+  },
+  "chat": {
+    "launcher": "Scrie-ne",
+    "title": "Asistent IN2",
+    "status": "Întreabă despre cadouri, produse și branding",
+    "greeting": "Bună! Sunt asistentul IN2. Întreabă-mă orice despre cadourile corporate premium, tehnicile de branding, produsele noastre sau cum să începi un proiect.",
+    "placeholder": "Scrie întrebarea ta…",
+    "send": "Trimite",
+    "close": "Închide chatul",
+    "suggestionsLabel": "Întrebări populare",
+    "fallback": "Încă nu am un răspuns bun pentru asta. Pentru orice detaliu concret, Aleksandra Stan te ajută cu drag: aleksandra.stan@in2consulting.pl sau +48 509 919 558. Poți încerca și una dintre întrebările de mai jos.",
+    "disclaimer": "Asistent automat — pentru o ofertă personalizată, contactează-ne direct.",
+    "suggestions": [
+      { "label": "Cu ce vă ocupați?", "query": "ce faceti what do you do" },
+      { "label": "Tehnici de branding", "query": "ce tehnica which branding technique" },
+      { "label": "Comandă minimă", "query": "comanda minima minimum order" },
+      { "label": "Termene de livrare", "query": "cat dureaza lead time" },
+      { "label": "Seturi cadou", "query": "seturi cadou gift sets" },
+      { "label": "Sustenabilitate", "query": "sunteti sustenabili sustainable" },
+      { "label": "Cere o ofertă", "query": "oferta get a quote" }
+    ]
+  }
+}

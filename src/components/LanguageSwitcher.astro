@@ -1,0 +1,31 @@
+---
+import { locales, getPath, type Lang, type RouteKey } from '../i18n/utils';
+
+interface Props { current: Lang; route: RouteKey }
+const { current, route } = Astro.props;
+const labels: Record<Lang, string> = { pl: 'PL', en: 'EN', ro: 'RO' };
+const slug = route === 'home' ? '' : route;
+---
+<nav class="langs" aria-label="Language">
+  {locales.map((lang, i) => (
+    <>
+      {i > 0 && <span class="langs__sep" aria-hidden="true">/</span>}
+      <a
+        href={getPath(lang, slug)}
+        class:list={['langs__link', lang === current && 'is-active']}
+        hreflang={lang}
+        aria-current={lang === current ? 'true' : undefined}
+      >{labels[lang]}</a>
+    </>
+  ))}
+</nav>
+
+<style>
+  .langs { display: inline-flex; align-items: center; gap: 0.35rem; font-family: var(--sans); font-size: 0.74rem; letter-spacing: 0.14em; }
+  .langs__sep { color: var(--line); }
+  .langs__link { color: var(--muted); padding: 0.2rem 0.1rem; transition: color 0.3s var(--ease); }
+  .langs__link:hover { color: var(--gold); }
+  .langs__link.is-active { color: var(--ink); font-weight: 500; }
+  :global(.header--dark) .langs__link { color: rgba(246,241,233,0.6); }
+  :global(.header--dark) .langs__link.is-active { color: var(--cream); }
+</style>

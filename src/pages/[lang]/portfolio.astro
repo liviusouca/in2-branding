@@ -1,0 +1,82 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import Divider from '../../components/Divider.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import { useTranslations, locales, type Lang } from '../../i18n/utils';
+import ourWork from '../../assets/our-work.jpg';
+import whoImg from '../../assets/who-we-are.jpg';
+import whyImg from '../../assets/why-in2.jpg';
+import giftImg from '../../assets/gift-sets.jpg';
+import howImg from '../../assets/how-we-work.jpg';
+import letsImg from '../../assets/lets-create.jpg';
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const t = useTranslations(lang);
+
+const gallery = [
+  { src: whoImg, alt: 'Branded powerbank, tumbler and premium tool set' },
+  { src: whyImg, alt: 'Branded notebook, pen, bottle and cosmetic pouch' },
+  { src: giftImg, alt: 'Curated premium gift set in branded packaging' },
+  { src: howImg, alt: 'Concept sketches for scented branded products' },
+  { src: letsImg, alt: 'Signature IN2 gift box with ribbon' },
+];
+---
+<Layout lang={lang} route="portfolio" title={t.seo.portfolio.title} description={t.seo.portfolio.description}>
+  <section class="section section--cream pagehead">
+    <div class="wrap text-center reveal">
+      <p class="kicker">IN2 Branding</p>
+      <h1 class="h-display">
+        {t.ourWork.title.split(' ')[0]}
+        <span class="h-gold">{t.ourWork.title.split(' ').slice(1).join(' ')}</span>
+      </h1>
+      <Divider align="center" />
+      <p class="lead pagehead__lead">{t.ourWork.subtitle}</p>
+    </div>
+  </section>
+
+  <section class="section section--cream" style="padding-top:0">
+    <div class="wrap">
+      <figure class="feature reveal">
+        <Image src={ourWork} alt="Line-up of premium branded products by IN2" widths={[720, 1100, 1440]} sizes="(max-width: 1200px) 92vw, 1200px" />
+        <figcaption>{t.ourWork.intro}</figcaption>
+      </figure>
+
+      <div class="grid">
+        {gallery.map((g) => (
+          <figure class="tile reveal">
+            <Image src={g.src} alt={g.alt} widths={[360, 560, 760]} sizes="(max-width: 700px) 92vw, 30vw" />
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner lang={lang} />
+</Layout>
+
+<style>
+  .pagehead__lead { margin-inline: auto; text-align: center; margin-top: 0.6rem; }
+
+  .feature { margin: 0 0 1.5rem; }
+  .feature :global(img) { width: 100%; border-radius: var(--radius); box-shadow: 0 40px 70px -45px rgba(43,37,33,0.6); }
+  .feature figcaption {
+    margin-top: 1.2rem; text-align: center; color: var(--muted);
+    font-family: var(--serif); font-style: italic; font-size: 1.2rem; max-width: 60ch; margin-inline: auto;
+  }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 1.5rem; }
+  .tile { margin: 0; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--line-soft); background: var(--cream-2); }
+  .tile :global(img) { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.7s var(--ease); }
+  .tile:hover :global(img) { transform: scale(1.05); }
+  .grid .tile:first-child { grid-column: span 2; }
+
+  @media (max-width: 760px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+    .grid .tile:first-child { grid-column: span 2; }
+  }
+</style>

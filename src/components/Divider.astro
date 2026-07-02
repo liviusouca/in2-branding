@@ -1,0 +1,7 @@
+---
+interface Props { align?: 'center' | 'start'; class?: string }
+const { align = 'center', class: cls = '' } = Astro.props;
+---
+<div class:list={['divider', align === 'start' && 'divider--start', cls]}>
+  <span class="divider__gem"></span>
+</div>

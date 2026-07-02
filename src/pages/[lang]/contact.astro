@@ -1,0 +1,109 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import Divider from '../../components/Divider.astro';
+import Icon from '../../components/Icon.astro';
+import { useTranslations, locales, type Lang } from '../../i18n/utils';
+import decor from '../../assets/contact-decor.jpg';
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const t = useTranslations(lang);
+const telHref = 'tel:' + t.contact.phone.replace(/\s/g, '');
+
+const socials = [
+  { icon: 'globe', label: t.contact.website, href: 'https://www.in2scentedart.com' },
+  { icon: 'instagram', label: 'instagram.com/in2scentedart', href: 'https://instagram.com/in2scentedart/' },
+  { icon: 'facebook', label: 'facebook.com/in2scentedart', href: 'https://facebook.com/in2scentedart/' },
+];
+---
+<Layout lang={lang} route="contact" title={t.seo.contact.title} description={t.seo.contact.description}>
+  <section class="section section--sand contact">
+    <div class="wrap contact__grid">
+      <div class="contact__text reveal">
+        <p class="kicker">IN2 Branding</p>
+        <h1 class="h-display">{t.contact.title}</h1>
+        <Divider align="start" />
+        <p class="lead">{t.contact.intro}</p>
+
+        <div class="card">
+          <div class="card__person">
+            <span class="card__avatar"><Icon name="user" size={26} /></span>
+            <div>
+              <p class="card__name">{t.contact.person}</p>
+              <p class="card__role">{t.contact.role}</p>
+            </div>
+          </div>
+          <Divider align="start" />
+          <ul class="card__lines">
+            <li>
+              <span class="card__badge"><Icon name="mail" size={18} /></span>
+              <span><small>{t.contact.emailLabel}</small><a href={`mailto:${t.contact.email}`}>{t.contact.email}</a></span>
+            </li>
+            <li>
+              <span class="card__badge"><Icon name="phone" size={18} /></span>
+              <span><small>{t.contact.phoneLabel}</small><a href={telHref}>{t.contact.phone}</a></span>
+            </li>
+          </ul>
+
+          <p class="card__follow">{t.contact.followLabel}</p>
+          <div class="card__socials">
+            {socials.map((s) => (
+              <a href={s.href} target="_blank" rel="noopener" aria-label={s.label}>
+                <Icon name={s.icon} size={18} /><span>{s.label}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="contact__media reveal">
+        <Image src={decor} alt="Golden botanical branch in a stoneware vase" widths={[360, 560, 720]} sizes="(max-width: 900px) 80vw, 38vw" />
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .contact__grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+
+  .card {
+    margin-top: 2.2rem; padding: clamp(1.6rem, 3vw, 2.4rem);
+    background: rgba(255,255,255,0.55); border: 1px solid var(--line);
+    border-radius: var(--radius); max-width: 520px;
+    box-shadow: 0 40px 60px -50px rgba(43,37,33,0.5);
+  }
+  .card__person { display: flex; align-items: center; gap: 1rem; }
+  .card__avatar {
+    width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center;
+    border: 1px solid var(--line); color: var(--gold); background: rgba(255,255,255,0.5);
+  }
+  .card__name { font-family: var(--serif); font-size: 1.7rem; font-weight: 500; margin: 0; }
+  .card__role { margin: 0; color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.14em; }
+
+  .card__lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+  .card__lines li { display: flex; align-items: center; gap: 0.9rem; }
+  .card__badge {
+    width: 40px; height: 40px; border-radius: 50%; flex: none; display: grid; place-items: center;
+    border: 1px solid var(--line); color: var(--gold);
+  }
+  .card__lines small { display: block; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--muted); }
+  .card__lines a { font-size: 1.05rem; color: var(--ink); }
+  .card__lines a:hover { color: var(--gold-deep); }
+
+  .card__follow { margin: 1.8rem 0 0.8rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--muted); }
+  .card__socials { display: grid; gap: 0.6rem; }
+  .card__socials a { display: inline-flex; align-items: center; gap: 0.7rem; color: var(--ink-soft); font-size: 0.92rem; }
+  .card__socials a:hover { color: var(--gold-deep); }
+  .card__socials :global(svg) { color: var(--gold); flex: none; }
+
+  .contact__media :global(img) { border-radius: var(--radius); width: 100%; box-shadow: 0 40px 60px -45px rgba(43,37,33,0.5); }
+
+  @media (max-width: 900px) {
+    .contact__grid { grid-template-columns: 1fr; }
+    .contact__media { order: -1; max-width: 420px; margin-inline: auto; }
+  }
+</style>

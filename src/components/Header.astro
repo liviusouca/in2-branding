@@ -1,0 +1,116 @@
+---
+import Logo from './Logo.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { useTranslations, getPath, type Lang, type RouteKey } from '../i18n/utils';
+
+interface Props { lang: Lang; route: RouteKey }
+const { lang, route } = Astro.props;
+const t = useTranslations(lang);
+
+const links: { key: RouteKey; slug: string; label: string }[] = [
+  { key: 'home', slug: '', label: t.nav.home },
+  { key: 'how-we-work', slug: 'how-we-work', label: t.nav.howWeWork },
+  { key: 'portfolio', slug: 'portfolio', label: t.nav.portfolio },
+  { key: 'contact', slug: 'contact', label: t.nav.contact },
+];
+---
+<header class="header" data-header>
+  <div class="header__inner wrap">
+    <Logo href={getPath(lang, '')} />
+
+    <button class="header__burger" data-burger aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="header__nav" data-nav aria-label="Primary">
+      <ul class="header__links">
+        {links.map((l) => (
+          <li>
+            <a
+              href={getPath(lang, l.slug)}
+              class:list={['header__link', l.key === route && 'is-active']}
+              aria-current={l.key === route ? 'page' : undefined}
+            >{l.label}</a>
+          </li>
+        ))}
+      </ul>
+      <div class="header__meta">
+        <LanguageSwitcher current={lang} route={route} />
+        <a href={getPath(lang, 'contact')} class="btn btn--primary header__cta">{t.nav.cta}</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(246, 241, 233, 0.82);
+    backdrop-filter: saturate(140%) blur(12px);
+    border-bottom: 1px solid var(--line-soft);
+    transition: background 0.3s var(--ease);
+  }
+  .header__inner { display: flex; align-items: center; justify-content: space-between; min-height: 74px; gap: 1.5rem; }
+
+  .header__nav { display: flex; align-items: center; gap: 2.2rem; }
+  .header__links { display: flex; gap: 1.9rem; list-style: none; margin: 0; padding: 0; }
+  .header__link {
+    font-family: var(--sans); font-weight: 400;
+    text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.76rem;
+    color: var(--ink-soft); position: relative; padding: 0.35rem 0;
+  }
+  .header__link::after {
+    content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 1px;
+    background: var(--gold); transition: width 0.35s var(--ease);
+  }
+  .header__link:hover { color: var(--gold-deep); }
+  .header__link:hover::after,
+  .header__link.is-active::after { width: 100%; }
+  .header__link.is-active { color: var(--ink); }
+
+  .header__meta { display: flex; align-items: center; gap: 1.4rem; }
+  .header__cta { padding: 0.7rem 1.3rem; font-size: 0.68rem; }
+
+  .header__burger {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: 0; cursor: pointer; padding: 8px; z-index: 60;
+  }
+  .header__burger span { width: 26px; height: 1.5px; background: var(--ink); transition: transform 0.3s var(--ease), opacity 0.3s var(--ease); }
+  .header.is-open .header__burger span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .header.is-open .header__burger span:nth-child(2) { opacity: 0; }
+  .header.is-open .header__burger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  @media (max-width: 900px) {
+    .header__burger { display: flex; }
+    .header__nav {
+      position: fixed; inset: 74px 0 auto 0;
+      flex-direction: column; align-items: flex-start; gap: 1.6rem;
+      background: var(--cream);
+      padding: 2rem var(--pad) 2.5rem;
+      border-bottom: 1px solid var(--line-soft);
+      transform: translateY(-120%);
+      transition: transform 0.4s var(--ease);
+      box-shadow: 0 24px 40px -28px rgba(0,0,0,0.35);
+    }
+    .header.is-open .header__nav { transform: translateY(0); }
+    .header__links { flex-direction: column; gap: 1.2rem; width: 100%; }
+    .header__link { font-size: 1rem; }
+    .header__meta { flex-direction: row-reverse; justify-content: space-between; width: 100%; gap: 1rem; }
+    .header__cta { flex: 1; justify-content: center; }
+  }
+</style>
+
+<script>
+  const header = document.querySelector('[data-header]');
+  const burger = document.querySelector('[data-burger]');
+  burger?.addEventListener('click', () => {
+    const open = header?.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', String(!!open));
+  });
+  document.querySelectorAll('[data-nav] a').forEach((a) =>
+    a.addEventListener('click', () => {
+      header?.classList.remove('is-open');
+      burger?.setAttribute('aria-expanded', 'false');
+    })
+  );
+</script>

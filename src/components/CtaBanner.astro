@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets';
+import Divider from './Divider.astro';
+import { useTranslations, getPath, type Lang } from '../i18n/utils';
+import letsCreate from '../assets/lets-create.jpg';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+// Split title so the second half renders in the script accent, like the PDF.
+const words = t.cta.title.split(' ');
+const head = words.slice(0, Math.ceil(words.length / 2)).join(' ');
+const tail = words.slice(Math.ceil(words.length / 2)).join(' ');
+---
+<section class="section section--dark cta reveal">
+  <div class="wrap cta__grid">
+    <div class="cta__text">
+      <div class="cta__ring">
+        <h2 class="h-section cta__title">
+          {head} <span class="script">{tail}</span>
+        </h2>
+        <Divider align="center" />
+        <p class="lead cta__lead">{t.cta.description}</p>
+        <a href={getPath(lang, 'contact')} class="btn btn--onDark">{t.cta.button}</a>
+      </div>
+    </div>
+    <div class="cta__media reveal">
+      <Image src={letsCreate} alt="IN2 premium branded gift box" widths={[420, 720, 900]} sizes="(max-width: 900px) 90vw, 42vw" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta { overflow: hidden; }
+  .cta__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+  .cta__ring { position: relative; padding: clamp(1.5rem, 4vw, 3rem) 0; }
+  .cta__ring::before {
+    content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: min(115%, 430px); aspect-ratio: 1; border: 1px solid rgba(201,168,106,0.4); border-radius: 50%;
+    pointer-events: none;
+  }
+  .cta__title { max-width: 14ch; }
+  .cta__lead { margin-inline: auto; text-align: center; }
+  .cta__text { text-align: center; }
+  .cta__ring .btn { margin-top: 1.8rem; }
+  .cta__media :global(img) {
+    border-radius: var(--radius); width: 100%; object-fit: cover;
+    box-shadow: 0 40px 70px -40px rgba(0,0,0,0.8);
+  }
+  @media (max-width: 860px) {
+    .cta__grid { grid-template-columns: 1fr; }
+    .cta__media { order: -1; }
+    .cta__ring::before { display: none; }
+  }
+</style>

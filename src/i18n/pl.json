@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "lang": "pl",
+    "label": "PL",
+    "siteName": "IN2 Branding",
+    "tagline": "Ekskluzywne prezenty firmowe i produkty brandowane"
+  },
+  "nav": {
+    "home": "Strona główna",
+    "howWeWork": "Jak pracujemy",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt",
+    "cta": "Rozpocznij projekt"
+  },
+  "seo": {
+    "home": { "title": "IN2 Branding — Ekskluzywne prezenty firmowe i produkty brandowane", "description": "Luksusowe rozwiązania co-brandingowe, dopracowane doświadczenia prezentowe i premium produkty personalizowane projektowane wokół Twojej marki." },
+    "howWeWork": { "title": "Jak pracujemy — IN2 Branding", "description": "Od wizji do realizacji: dobór produktów, koncepcje brandingowe, projekt opakowań, produkcja i logistyka — kompleksowo zarządzane." },
+    "portfolio": { "title": "Nasze realizacje — IN2 Branding", "description": "Przemyślany branding. Produkty premium. Realny efekt. Wybór produktów brandowanych i zestawów prezentowych IN2." },
+    "contact": { "title": "Kontakt — IN2 Branding", "description": "Opowiedz nam o swojej wizji. Przygotujemy w pełni spersonalizowane, premium rozwiązanie prezentowe dopasowane do Twojej marki." }
+  },
+  "hero": {
+    "kicker": "Ekskluzywne prezenty firmowe i produkty brandowane",
+    "title": "Luksusowy branding projektowany wokół Ciebie",
+    "subtitle": "Luksusowe rozwiązania co-brandingowe, dopracowane doświadczenia prezentowe i premium produkty personalizowane projektowane wokół Twojej marki.",
+    "primaryCta": "Stwórzmy coś wyjątkowego",
+    "secondaryCta": "Zobacz realizacje"
+  },
+  "whoWeAre": {
+    "title": "Kim jesteśmy",
+    "items": [
+      { "text": "Jesteśmy polską firmą specjalizującą się w premium i wysokiej jakości brandowanych produktach marketingowych, dopasowanych do wizji każdego klienta." },
+      { "text": "W IN2 działamy jako zewnętrzny, kreatywny partner marketingowy — pomagamy markom przekształcać pomysły w zapadające w pamięć, pięknie wykonane doświadczenia, które ludzie naprawdę chcą zatrzymać, używać i pamiętać." },
+      { "text": "W przeciwieństwie do tradycyjnych dostawców gadżetów skupionych na tanich, powtarzalnych produktach, wierzymy, że niskiej jakości materiały szkodzą wizerunkowi marki. Na dzisiejszym rynku generyczne smycze i jednorazowe kubki z logo nie są już skutecznym marketingiem — są anty-reklamą." },
+      { "text": "Dlatego pracujemy wyłącznie ze starannie wybranymi produktami premium, eleganckimi technikami brandingu i dopracowanymi rozwiązaniami opakowaniowymi, zaprojektowanymi tak, by podnieść sposób postrzegania Twojej marki." }
+    ],
+    "highlight": "Bo silne marki zasługują na coś więcej niż jednorazowe gadżety."
+  },
+  "whyIn2": {
+    "title": "Dlaczego IN2",
+    "items": [
+      "Wyłącznie produkty premium",
+      "Eleganckie techniki brandingu",
+      "W pełni spersonalizowane koncepcje",
+      "Estetyka inspirowana retailem",
+      "Kompleksowe zarządzanie projektem",
+      "Ekskluzywna prezentacja i opakowania"
+    ]
+  },
+  "howWeWork": {
+    "title": "Jak pracujemy",
+    "steps": [
+      { "title": "Ty dzielisz się wizją", "text": "Przekazujesz wizję, okazję i budżet." },
+      { "title": "My realizujemy — kompleksowo", "text": "Dostarczamy dobór produktów, koncepcje brandingowe, projekt opakowań, produkcję i logistykę — kompleksowo zarządzane od początku do końca." }
+    ]
+  },
+  "giftSets": {
+    "title": "Zestawy prezentowe, które promują Twoją markę",
+    "description": "Projektujemy premium zestawy prezentowe, które łączą przemyślaną kompozycję, eleganckie opakowanie i Twoją markę — tworząc trwałe wrażenia wykraczające daleko poza sam moment.",
+    "items": [
+      "W pełni spersonalizowane Twoim brandingiem",
+      "Wyselekcjonowane produkty premium odzwierciedlające Twoje wartości",
+      "Idealne dla klientów, partnerów i pracowników",
+      "Elegancka prezentacja, która mówi w imieniu Twojej marki"
+    ],
+    "highlight": "To więcej niż prezent. To doświadczenie Twojej marki."
+  },
+  "ourWork": {
+    "title": "Nasze realizacje",
+    "subtitle": "Przemyślany branding. Produkty premium. Realny efekt.",
+    "intro": "Wybór produktów brandowanych, zapachowych akcentów i dopracowanych zestawów prezentowych stworzonych dla marek, którym zależy na tym, jak są postrzegane."
+  },
+  "cta": {
+    "title": "Stwórzmy coś wyjątkowego",
+    "description": "Opowiedz nam o swojej wizji. Przygotujemy w pełni spersonalizowane, premium rozwiązanie prezentowe dopasowane do Twojej marki.",
+    "button": "Skontaktuj się"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "intro": "Opowiedz nam o swojej wizji — odpowiadamy w ciągu jednego dnia roboczego.",
+    "person": "Aleksandra Stan",
+    "role": "Opiekun klienta",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Telefon",
+    "followLabel": "Obserwuj nas",
+    "email": "aleksandra.stan@in2consulting.pl",
+    "phone": "+48 509 919 558",
+    "website": "www.in2scentedart.com"
+  },
+  "footer": {
+    "tagline": "Ekskluzywne prezenty firmowe i produkty brandowane.",
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "made": "Projektowane wokół Twojej marki."
+  },
+  "chat": {
+    "launcher": "Napisz do nas",
+    "title": "Asystent IN2",
+    "status": "Zapytaj o prezenty, produkty i branding",
+    "greeting": "Cześć! Jestem asystentem IN2. Zapytaj mnie o wszystko: premium prezenty firmowe, techniki brandingu, nasze produkty czy jak rozpocząć projekt.",
+    "placeholder": "Wpisz pytanie…",
+    "send": "Wyślij",
+    "close": "Zamknij czat",
+    "suggestionsLabel": "Popularne pytania",
+    "fallback": "Nie mam jeszcze dobrej odpowiedzi na to pytanie. W każdej konkretnej sprawie chętnie pomoże Aleksandra Stan: aleksandra.stan@in2consulting.pl lub +48 509 919 558. Możesz też wybrać jedno z pytań poniżej.",
+    "disclaimer": "Automatyczny asystent — po indywidualną ofertę skontaktuj się z nami bezpośrednio.",
+    "suggestions": [
+      { "label": "Czym się zajmujecie?", "query": "czym sie zajmujecie what do you do" },
+      { "label": "Techniki brandingu", "query": "ktora technika which branding technique" },
+      { "label": "Minimalne zamówienie", "query": "minimalne zamowienie minimum order" },
+      { "label": "Czas realizacji", "query": "czas realizacji lead time" },
+      { "label": "Zestawy prezentowe", "query": "zestawy prezentowe gift sets" },
+      { "label": "Ekologia", "query": "czy jestescie eko sustainable" },
+      { "label": "Wycena", "query": "wycena get a quote" }
+    ]
+  }
+}

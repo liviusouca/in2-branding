@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "lang": "en",
+    "label": "EN",
+    "siteName": "IN2 Branding",
+    "tagline": "Premium Corporate Gifting & Branded Products"
+  },
+  "nav": {
+    "home": "Home",
+    "howWeWork": "How We Work",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "cta": "Start a project"
+  },
+  "seo": {
+    "home": { "title": "IN2 Branding — Premium Corporate Gifting & Branded Products", "description": "Luxury co-branding solutions, curated gifting experiences and premium personalized products designed around your brand." },
+    "howWeWork": { "title": "How We Work — IN2 Branding", "description": "From vision to delivery: product sourcing, branding concepts, packaging design, production and logistics — fully managed." },
+    "portfolio": { "title": "Our Work — IN2 Branding", "description": "Thoughtful branding. Premium products. Real impact. A selection of branded products and gift sets by IN2." },
+    "contact": { "title": "Contact — IN2 Branding", "description": "Tell us about your vision. We will prepare a fully customized premium gifting solution tailored to your brand." }
+  },
+  "hero": {
+    "kicker": "Premium Corporate Gifting & Branded Products",
+    "title": "Luxury branding, designed around you",
+    "subtitle": "Luxury co-branding solutions, curated gifting experiences and premium personalized products designed around your brand.",
+    "primaryCta": "Let's create something exceptional",
+    "secondaryCta": "See our work"
+  },
+  "whoWeAre": {
+    "title": "Who We Are",
+    "items": [
+      { "text": "We are a Polish company specializing in premium and high quality branded marketing products tailored to each client's vision." },
+      { "text": "At IN2, we operate as an external creative marketing partner — helping brands transform ideas into memorable, beautifully crafted experiences that people genuinely want to keep, use and remember." },
+      { "text": "Unlike traditional promotional suppliers focused on cheap, repetitive products, we believe low-quality merchandise damages brand perception. In today's market, generic lanyards and disposable logo mugs are no longer effective marketing — they are anti-advertising." },
+      { "text": "That is why we work exclusively with carefully selected premium products, elegant branding techniques and refined packaging solutions designed to elevate the way your brand is perceived." }
+    ],
+    "highlight": "Because strong brands deserve more than disposable gadgets."
+  },
+  "whyIn2": {
+    "title": "Why IN2",
+    "items": [
+      "Premium products only",
+      "Elegant branding techniques",
+      "Fully customized concepts",
+      "Retail-inspired aesthetics",
+      "End-to-end project management",
+      "High-end presentation & packaging"
+    ]
+  },
+  "howWeWork": {
+    "title": "How We Work",
+    "steps": [
+      { "title": "You share the vision", "text": "You provide the vision, occasion and budget." },
+      { "title": "We deliver, fully managed", "text": "We deliver product sourcing, branding concepts, packaging design, production and logistics — fully managed from start to finish." }
+    ]
+  },
+  "giftSets": {
+    "title": "Gift Sets That Promote Your Brand",
+    "description": "We design premium gift sets that combine thoughtful curation, elegant packaging and your brand — creating lasting impressions that go far beyond the moment.",
+    "items": [
+      "Fully personalized with your branding",
+      "Curated premium products that reflect your values",
+      "Perfect for clients, partners & employees",
+      "Elegant presentation that speaks for your brand"
+    ],
+    "highlight": "More than a gift. It's your brand experience."
+  },
+  "ourWork": {
+    "title": "Our Work",
+    "subtitle": "Thoughtful branding. Premium products. Real impact.",
+    "intro": "A selection of branded products, scented pieces and curated gift sets crafted for brands that care about how they are perceived."
+  },
+  "cta": {
+    "title": "Let's Create Something Exceptional",
+    "description": "Tell us about your vision. We will prepare a fully customized premium gifting solution tailored to your brand.",
+    "button": "Get in touch"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "intro": "Tell us about your vision — we reply within one business day.",
+    "person": "Aleksandra Stan",
+    "role": "Client Partner",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "followLabel": "Follow us",
+    "email": "aleksandra.stan@in2consulting.pl",
+    "phone": "+48 509 919 558",
+    "website": "www.in2scentedart.com"
+  },
+  "footer": {
+    "tagline": "Premium corporate gifting & branded products.",
+    "rights": "All rights reserved.",
+    "made": "Designed around your brand."
+  },
+  "chat": {
+    "launcher": "Chat with us",
+    "title": "IN2 Assistant",
+    "status": "Ask about gifting, products & branding",
+    "greeting": "Hi! I'm the IN2 assistant. Ask me anything about premium corporate gifting, branding techniques, our products or how to start a project.",
+    "placeholder": "Type your question…",
+    "send": "Send",
+    "close": "Close chat",
+    "suggestionsLabel": "Popular questions",
+    "fallback": "I'm not sure I have a good answer for that yet. For anything specific, Aleksandra Stan will gladly help: aleksandra.stan@in2consulting.pl or +48 509 919 558. You can also try one of the questions below.",
+    "disclaimer": "Automated assistant — for a tailored proposal, contact us directly.",
+    "suggestions": [
+      { "label": "What do you do?", "query": "what do you do" },
+      { "label": "Branding techniques", "query": "which branding technique is right" },
+      { "label": "Minimum order", "query": "minimum order quantity" },
+      { "label": "Lead times", "query": "how long does an order take" },
+      { "label": "Gift sets", "query": "curated gift sets" },
+      { "label": "Sustainability", "query": "are you sustainable" },
+      { "label": "Get a quote", "query": "get a quote" }
+    ]
+  }
+}

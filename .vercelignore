@@ -1,0 +1,8 @@
+node_modules
+dist
+.astro
+extracted_images
+extracted_pages
+In2 Branding.pdf
+docs
+scripts

@@ -1,0 +1,56 @@
+---
+import Icon from './Icon.astro';
+
+interface Item { icon: string; title?: string; text: string; highlight?: boolean }
+interface Props { items: Item[]; variant?: 'stack' | 'rule' }
+const { items, variant = 'stack' } = Astro.props;
+---
+<ul class:list={['icon-list', `icon-list--${variant}`]}>
+  {items.map((item) => (
+    <li class:list={['icon-list__item', item.highlight && 'is-highlight']}>
+      <span class="icon-list__badge"><Icon name={item.icon} size={22} /></span>
+      <div class="icon-list__body">
+        {item.title && <h3 class="icon-list__title">{item.title}</h3>}
+        <p class="icon-list__text">{item.text}</p>
+      </div>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .icon-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.6rem; }
+  .icon-list__item { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; align-items: start; }
+  .icon-list--rule .icon-list__item { padding-bottom: 1.6rem; border-bottom: 1px solid var(--line-soft); }
+  .icon-list--rule .icon-list__item:last-child { border-bottom: 0; padding-bottom: 0; }
+
+  .icon-list__badge {
+    width: 46px; height: 46px; flex: none;
+    display: grid; place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--gold);
+    background: rgba(255, 255, 255, 0.25);
+  }
+  .icon-list__title {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ink);
+    margin: 0.35rem 0 0.4rem;
+  }
+  .icon-list__text { color: var(--ink-soft); margin: 0; font-size: 0.98rem; }
+  .icon-list__item.is-highlight .icon-list__text {
+    color: var(--gold-deep);
+    font-weight: 500;
+    font-size: 1.06rem;
+  }
+  .icon-list__item.is-highlight .icon-list__badge {
+    border-color: var(--gold);
+    background: rgba(184, 148, 77, 0.1);
+  }
+  :global(.section--dark) .icon-list__text { color: rgba(246, 241, 233, 0.8); }
+  :global(.section--dark) .icon-list__title { color: var(--cream); }
+  :global(.section--dark) .icon-list__badge { background: rgba(255,255,255,0.04); }
+</style>

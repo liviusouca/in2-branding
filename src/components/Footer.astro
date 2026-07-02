@@ -1,0 +1,81 @@
+---
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import { useTranslations, getPath, type Lang, type RouteKey } from '../i18n/utils';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const nav: { slug: string; label: string }[] = [
+  { slug: '', label: t.nav.home },
+  { slug: 'how-we-work', label: t.nav.howWeWork },
+  { slug: 'portfolio', label: t.nav.portfolio },
+  { slug: 'contact', label: t.nav.contact },
+];
+const socials = [
+  { icon: 'globe', label: t.contact.website, href: 'https://www.in2scentedart.com' },
+  { icon: 'instagram', label: 'instagram.com/in2scentedart', href: 'https://instagram.com/in2scentedart/' },
+  { icon: 'facebook', label: 'facebook.com/in2scentedart', href: 'https://facebook.com/in2scentedart/' },
+];
+const year = 2025;
+---
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <Logo href={getPath(lang, '')} />
+      <p class="footer__tag">{t.footer.tagline}</p>
+    </div>
+
+    <nav class="footer__col" aria-label="Footer">
+      <ul>
+        {nav.map((n) => <li><a href={getPath(lang, n.slug)}>{n.label}</a></li>)}
+      </ul>
+    </nav>
+
+    <div class="footer__col footer__contact">
+      <a href={`mailto:${t.contact.email}`}><Icon name="mail" size={16} />{t.contact.email}</a>
+      <a href={`tel:${t.contact.phone.replace(/\s/g, '')}`}><Icon name="phone" size={16} />{t.contact.phone}</a>
+      <div class="footer__socials">
+        {socials.map((s) => (
+          <a href={s.href} target="_blank" rel="noopener" aria-label={s.label}><Icon name={s.icon} size={18} /></a>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap footer__base">
+    <span>© {year} IN2 Branding. {t.footer.rights}</span>
+    <span class="footer__made">{t.footer.made}</span>
+  </div>
+</footer>
+
+<style>
+  .footer { background: radial-gradient(120% 140% at 20% 0%, var(--black-2), var(--black) 75%); color: rgba(246,241,233,0.75); padding-top: clamp(3rem, 6vw, 5rem); }
+  .footer__grid { display: grid; grid-template-columns: 1.4fr 1fr 1.3fr; gap: 2.5rem; padding-bottom: 2.5rem; }
+  .footer :global(.logo__mark) { font-size: 1.5rem; }
+  .footer__tag { margin-top: 1rem; max-width: 28ch; color: rgba(246,241,233,0.6); font-size: 0.94rem; }
+
+  .footer__col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
+  .footer__col a { color: rgba(246,241,233,0.72); font-size: 0.92rem; display: inline-flex; align-items: center; gap: 0.55rem; }
+  .footer__col a:hover { color: var(--gold-soft); }
+  .footer__col :global(svg) { color: var(--gold-soft); }
+  .footer__contact { display: grid; gap: 0.8rem; align-content: start; }
+  .footer__socials { display: flex; gap: 0.7rem; margin-top: 0.5rem; }
+  .footer__socials a {
+    width: 40px; height: 40px; border: 1px solid rgba(201,168,106,0.35); border-radius: 50%;
+    display: grid; place-items: center; color: var(--gold-soft);
+  }
+  .footer__socials a:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
+
+  .footer__base {
+    display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    padding: 1.5rem var(--pad); border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.78rem; letter-spacing: 0.04em; color: rgba(246,241,233,0.5);
+  }
+  .footer__made { font-style: italic; font-family: var(--serif); font-size: 0.95rem; color: var(--gold-soft); }
+
+  @media (max-width: 760px) {
+    .footer__grid { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>

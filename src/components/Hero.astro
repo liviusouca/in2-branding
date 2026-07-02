@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+import Divider from './Divider.astro';
+import { useTranslations, getPath, type Lang } from '../i18n/utils';
+import logo from '../assets/logo-lockup.png';
+import leaves from '../assets/hero-leaves.jpg';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+<section class="hero">
+  <img class="hero__leaves" src={leaves.src} alt="" aria-hidden="true" loading="eager" />
+  <div class="hero__waves" aria-hidden="true"></div>
+
+  <div class="wrap hero__inner">
+    <Image class="hero__logo" src={logo} alt="IN2 Branding" width={220} loading="eager" />
+    <p class="kicker hero__kicker">{t.hero.kicker}</p>
+    <h1 class="h-display hero__title">{t.hero.subtitle}</h1>
+    <Divider align="center" />
+    <div class="hero__actions">
+      <a href={getPath(lang, 'contact')} class="btn btn--primary">{t.hero.primaryCta}</a>
+      <a href={getPath(lang, 'portfolio')} class="btn btn--ghost">{t.hero.secondaryCta}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(165deg, #f8f3ec 0%, #efe5d6 55%, #e8dccb 100%);
+    padding-block: clamp(3.5rem, 8vw, 7rem) clamp(4rem, 9vw, 8rem);
+  }
+  .hero__leaves {
+    position: absolute; top: -4%; right: -3%;
+    width: clamp(240px, 34vw, 560px); opacity: 0.5;
+    mix-blend-mode: multiply; pointer-events: none;
+  }
+  .hero__waves {
+    position: absolute; inset: 0; pointer-events: none; opacity: 0.6;
+    background:
+      radial-gradient(60% 40% at 8% 6%, rgba(201,168,106,0.14), transparent 60%),
+      radial-gradient(50% 40% at 92% 96%, rgba(201,168,106,0.12), transparent 60%);
+  }
+  .hero__inner { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .hero__logo { width: clamp(150px, 20vw, 220px); height: auto; margin-bottom: 1.6rem; }
+  .hero__kicker { margin-bottom: 1.4rem; }
+  .hero__title {
+    max-width: 20ch; font-weight: 500;
+    font-size: clamp(2.1rem, 4.6vw, 3.8rem);
+    color: var(--ink);
+  }
+  .hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 0.6rem; }
+</style>

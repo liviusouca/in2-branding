@@ -1,0 +1,35 @@
+---
+interface Props { href: string; class?: string }
+const { href, class: cls = '' } = Astro.props;
+---
+<a href={href} class:list={['logo', cls]} aria-label="IN2 Branding — home">
+  <span class="logo__mark">IN2</span>
+  <span class="logo__sub">Branding</span>
+</a>
+
+<style>
+  .logo { display: inline-flex; flex-direction: column; align-items: center; line-height: 1; }
+  .logo__mark {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.7rem;
+    letter-spacing: 0.02em;
+    color: var(--gold);
+    background: linear-gradient(120deg, var(--gold-deep), var(--gold-soft) 55%, var(--gold-deep));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .logo__sub {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 0.56rem;
+    text-transform: uppercase;
+    letter-spacing: 0.42em;
+    color: var(--muted);
+    margin-top: 2px;
+    padding-left: 0.42em;
+  }
+  :global(.header--dark) .logo__sub,
+  :global(.footer) .logo__sub { color: rgba(246, 241, 233, 0.6); }
+</style>

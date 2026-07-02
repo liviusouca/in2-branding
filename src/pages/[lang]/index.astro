@@ -1,0 +1,110 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Divider from '../../components/Divider.astro';
+import IconList from '../../components/IconList.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import Icon from '../../components/Icon.astro';
+import { useTranslations, locales, type Lang } from '../../i18n/utils';
+import whoImg from '../../assets/who-we-are.jpg';
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const t = useTranslations(lang);
+
+const whoIcons = ['globe', 'people', 'shieldx', 'gem'];
+const whoItems = t.whoWeAre.items.map((it, i) => ({ icon: whoIcons[i], text: it.text }));
+
+const whyIcons = ['diamond', 'pen', 'clipboard', 'eye', 'user', 'gift'];
+---
+<Layout lang={lang} route="home" title={t.seo.home.title} description={t.seo.home.description}>
+  <Hero lang={lang} />
+
+  <!-- Who We Are -->
+  <section class="section section--cream">
+    <div class="wrap who">
+      <div class="who__text reveal">
+        <h2 class="h-section">
+          {t.whoWeAre.title.split(' ')[0]}
+          <span class="h-gold">{t.whoWeAre.title.split(' ').slice(1).join(' ')}</span>
+        </h2>
+        <Divider align="start" />
+        <IconList items={whoItems} variant="rule" />
+        <p class="who__highlight">
+          <Icon name="heart" size={20} />
+          <span>{t.whoWeAre.highlight}</span>
+        </p>
+      </div>
+      <div class="who__media reveal">
+        <Image src={whoImg} alt="Premium branded powerbank, tumbler and tool set by IN2" widths={[420, 720, 900]} sizes="(max-width: 950px) 90vw, 44vw" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Why IN2 -->
+  <section class="section section--sand">
+    <div class="wrap why">
+      <header class="why__head reveal text-center">
+        <p class="kicker">IN2 Branding</p>
+        <h2 class="h-section">
+          {t.whyIn2.title.split(' ')[0]}
+          <span class="h-gold">{t.whyIn2.title.split(' ').slice(1).join(' ')}</span>
+        </h2>
+        <Divider align="center" />
+      </header>
+      <ul class="why__grid reveal">
+        {t.whyIn2.items.map((item, i) => (
+          <li class="why__card">
+            <span class="why__badge"><Icon name={whyIcons[i]} size={24} /></span>
+            <span class="why__label">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <CtaBanner lang={lang} />
+</Layout>
+
+<style>
+  .who { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+  .who__highlight {
+    display: flex; align-items: center; gap: 0.7rem; margin-top: 2rem;
+    color: var(--gold-deep); font-weight: 500; font-size: 1.1rem;
+  }
+  .who__highlight :global(svg) { color: var(--gold); flex: none; }
+  .who__media :global(img) { border-radius: var(--radius); box-shadow: 0 40px 60px -45px rgba(43,37,33,0.55); width: 100%; }
+
+  .why__head { max-width: 40ch; margin-inline: auto; margin-bottom: 3rem; }
+  .why__grid {
+    list-style: none; margin: 0; padding: 0;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
+  }
+  .why__card {
+    display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.1rem;
+    padding: 2.4rem 1.4rem; background: rgba(255,255,255,0.4);
+    border: 1px solid var(--line-soft); border-radius: var(--radius);
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+  }
+  .why__card:hover { transform: translateY(-4px); box-shadow: 0 26px 40px -30px rgba(43,37,33,0.4); border-color: var(--line); }
+  .why__badge {
+    width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center;
+    border: 1px solid var(--line); color: var(--gold); background: rgba(255,255,255,0.5);
+  }
+  .why__label { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; color: var(--ink); line-height: 1.2; }
+
+  @media (max-width: 950px) {
+    .who { grid-template-columns: 1fr; }
+    .who__media { order: -1; }
+  }
+  @media (max-width: 760px) {
+    .why__grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 460px) {
+    .why__grid { grid-template-columns: 1fr; }
+  }
+</style>

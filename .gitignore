@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+extracted_pages/
+
+extracted_images/
+.gstack/
+.vercel
+.env*
+In2 Branding.pdf
