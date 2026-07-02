@@ -82,7 +82,7 @@
     "emailLabel": "E-mail",
     "phoneLabel": "Telefon",
     "followLabel": "Obserwuj nas",
-    "email": "aleksandra.stan@in2consulting.pl",
+    "email": "Sales@in2branding.pl",
     "phone": "+48 509 919 558",
     "website": "www.in2scentedart.com"
   },
@@ -100,7 +100,7 @@
     "send": "Wyślij",
     "close": "Zamknij czat",
     "suggestionsLabel": "Popularne pytania",
-    "fallback": "Nie mam jeszcze dobrej odpowiedzi na to pytanie. W każdej konkretnej sprawie chętnie pomoże Aleksandra Stan: aleksandra.stan@in2consulting.pl lub +48 509 919 558. Możesz też wybrać jedno z pytań poniżej.",
+    "fallback": "Nie mam jeszcze dobrej odpowiedzi na to pytanie. W każdej konkretnej sprawie chętnie pomoże Aleksandra Stan: Sales@in2branding.pl lub +48 509 919 558. Możesz też wybrać jedno z pytań poniżej.",
     "disclaimer": "Automatyczny asystent — po indywidualną ofertę skontaktuj się z nami bezpośrednio.",
     "suggestions": [
       { "label": "Czym się zajmujecie?", "query": "czym sie zajmujecie what do you do" },

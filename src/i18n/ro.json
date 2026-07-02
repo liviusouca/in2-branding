@@ -82,7 +82,7 @@
     "emailLabel": "E-mail",
     "phoneLabel": "Telefon",
     "followLabel": "Urmărește-ne",
-    "email": "aleksandra.stan@in2consulting.pl",
+    "email": "Sales@in2branding.pl",
     "phone": "+48 509 919 558",
     "website": "www.in2scentedart.com"
   },
@@ -100,7 +100,7 @@
     "send": "Trimite",
     "close": "Închide chatul",
     "suggestionsLabel": "Întrebări populare",
-    "fallback": "Încă nu am un răspuns bun pentru asta. Pentru orice detaliu concret, Aleksandra Stan te ajută cu drag: aleksandra.stan@in2consulting.pl sau +48 509 919 558. Poți încerca și una dintre întrebările de mai jos.",
+    "fallback": "Încă nu am un răspuns bun pentru asta. Pentru orice detaliu concret, Aleksandra Stan te ajută cu drag: Sales@in2branding.pl sau +48 509 919 558. Poți încerca și una dintre întrebările de mai jos.",
     "disclaimer": "Asistent automat — pentru o ofertă personalizată, contactează-ne direct.",
     "suggestions": [
       { "label": "Cu ce vă ocupați?", "query": "ce faceti what do you do" },
