@@ -25,9 +25,9 @@
   --script: "Great Vibes", "Cormorant Garamond", cursive;
 
   /* Rhythm */
-  --wrap: 1200px;
-  --wrap-narrow: 900px;
-  --pad: clamp(1.25rem, 5vw, 4rem);
+  --wrap: 1400px;
+  --wrap-narrow: 1040px;
+  --pad: clamp(1.25rem, 5vw, 5rem);
   --section-y: clamp(4rem, 9vw, 8rem);
   --radius: 4px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);

@@ -16,7 +16,8 @@ const t = useTranslations(lang);
   <div class="wrap hero__inner">
     <Image class="hero__logo" src={logo} alt="IN2 Branding" width={220} loading="eager" />
     <p class="kicker hero__kicker">{t.hero.kicker}</p>
-    <h1 class="h-display hero__title">{t.hero.subtitle}</h1>
+    <h1 class="h-display hero__title">{t.hero.title}</h1>
+    <p class="hero__lead">{t.hero.subtitle}</p>
     <Divider align="center" />
     <div class="hero__actions">
       <a href={getPath(lang, 'contact')} class="btn btn--primary">{t.hero.primaryCta}</a>
@@ -29,7 +30,7 @@ const t = useTranslations(lang);
   .hero {
     position: relative; overflow: hidden;
     background: linear-gradient(165deg, #f8f3ec 0%, #efe5d6 55%, #e8dccb 100%);
-    padding-block: clamp(3.5rem, 8vw, 7rem) clamp(4rem, 9vw, 8rem);
+    padding-block: clamp(2.25rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem);
   }
   .hero__leaves {
     position: absolute; top: -4%; right: -3%;
@@ -43,12 +44,18 @@ const t = useTranslations(lang);
       radial-gradient(50% 40% at 92% 96%, rgba(201,168,106,0.12), transparent 60%);
   }
   .hero__inner { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; }
-  .hero__logo { width: clamp(150px, 20vw, 220px); height: auto; margin-bottom: 1.6rem; }
-  .hero__kicker { margin-bottom: 1.4rem; }
+  .hero__logo { width: clamp(130px, 15vw, 172px); height: auto; margin-bottom: 1.2rem; }
+  .hero__kicker { margin-bottom: 1rem; }
   .hero__title {
-    max-width: 20ch; font-weight: 500;
-    font-size: clamp(2.1rem, 4.6vw, 3.8rem);
+    max-width: 22ch; font-weight: 500;
+    font-size: clamp(2.1rem, 4.4vw, 3.9rem);
     color: var(--ink);
   }
-  .hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 0.6rem; }
+  .hero__lead {
+    max-width: 60ch; margin: 1rem auto 0;
+    color: var(--ink-soft);
+    font-size: clamp(1rem, 1.5vw, 1.22rem);
+    line-height: 1.6;
+  }
+  .hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 0.4rem; }
 </style>
