@@ -14,7 +14,6 @@ export const siteContent = defineType({
     { name: 'gifts', title: 'Zestawy prezentowe' },
     { name: 'work', title: 'Portofoliu (intro)' },
     { name: 'cta', title: 'CTA' },
-    { name: 'contact', title: 'Contact' },
   ],
   fields: [
     // Hero
@@ -63,14 +62,6 @@ export const siteContent = defineType({
     defineField({ name: 'ctaTitle', title: 'Titlu', type: 'localeString', group: 'cta' }),
     defineField({ name: 'ctaDescription', title: 'Descriere', type: 'localeText', group: 'cta' }),
     defineField({ name: 'ctaImage', title: 'Imagine (cutie cadou)', type: 'image', options: { hotspot: true }, group: 'cta' }),
-    // Contact
-    defineField({ name: 'contactPerson', title: 'Persoană', type: 'string', group: 'contact' }),
-    defineField({ name: 'contactRole', title: 'Rol', type: 'localeString', group: 'contact' }),
-    defineField({ name: 'contactEmail', title: 'E-mail', type: 'string', group: 'contact' }),
-    defineField({ name: 'contactPhone', title: 'Telefon', type: 'string', group: 'contact' }),
-    defineField({ name: 'contactWebsite', title: 'Website', type: 'string', group: 'contact' }),
-    defineField({ name: 'contactInstagram', title: 'Instagram (URL)', type: 'url', group: 'contact' }),
-    defineField({ name: 'contactFacebook', title: 'Facebook (URL)', type: 'url', group: 'contact' }),
   ],
   preview: { prepare: () => ({ title: 'Texte & imagini site' }) },
 });

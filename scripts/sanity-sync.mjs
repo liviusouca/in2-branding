@@ -60,6 +60,7 @@ async function main() {
   const chat = await groq(`*[_type=="chatEntry"]|order(order asc){
     _id, question, answer, keywordsPl, keywordsEn, keywordsRo
   }`);
+  const ci = (await groq(`*[_id=="contactInfo"][0]`)) || {};
   if (!sc) throw new Error('siteContent not found');
 
   // 1) i18n texts: overwrite CMS-managed fields, keep nav/seo/meta/footer/chat-UI.
@@ -83,11 +84,11 @@ async function main() {
     t.ourWork.title = pick(sc.workTitle, lang);
     t.ourWork.subtitle = pick(sc.workSubtitle, lang);
     t.ourWork.intro = pick(sc.workIntro, lang);
-    if (sc.contactPerson) t.contact.person = sc.contactPerson;
-    t.contact.role = pick(sc.contactRole, lang) || t.contact.role;
-    if (sc.contactEmail) t.contact.email = sc.contactEmail;
-    if (sc.contactPhone) t.contact.phone = sc.contactPhone;
-    if (sc.contactWebsite) t.contact.website = sc.contactWebsite;
+    if (ci.person) t.contact.person = ci.person;
+    if (pick(ci.role, lang)) t.contact.role = pick(ci.role, lang);
+    if (ci.email) t.contact.email = ci.email;
+    if (ci.phone) t.contact.phone = ci.phone;
+    if (ci.website) t.contact.website = ci.website;
     writeFileSync(p, JSON.stringify(t, null, 2) + '\n');
   }
   console.log('  i18n texts updated.');

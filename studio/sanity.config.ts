@@ -1,8 +1,9 @@
 import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
+import { assist } from '@sanity/assist';
 import { schemaTypes } from './schemaTypes';
 
-const SINGLETONS = ['siteContent'];
+const SINGLETONS = ['siteContent', 'contactInfo'];
 
 export default defineConfig({
   name: 'in2branding',
@@ -10,6 +11,19 @@ export default defineConfig({
   projectId: 'nd73gga6',
   dataset: 'production',
   plugins: [
+    // AI translation: edit one language, auto-translate to the others.
+    assist({
+      translate: {
+        field: {
+          documentTypes: ['siteContent', 'contactInfo', 'project', 'chatEntry'],
+          languages: [
+            { id: 'pl', title: 'Polski' },
+            { id: 'en', title: 'English' },
+            { id: 'ro', title: 'Română' },
+          ],
+        },
+      },
+    }),
     structureTool({
       structure: (S) =>
         S.list()
@@ -19,6 +33,10 @@ export default defineConfig({
               .title('Texte & imagini site')
               .id('siteContent')
               .child(S.document().schemaType('siteContent').documentId('siteContent')),
+            S.listItem()
+              .title('Contact')
+              .id('contactInfo')
+              .child(S.document().schemaType('contactInfo').documentId('contactInfo')),
             S.divider(),
             S.documentTypeListItem('project').title('Proiecte (portofoliu)'),
             S.documentTypeListItem('chatEntry').title('Întrebări chat'),

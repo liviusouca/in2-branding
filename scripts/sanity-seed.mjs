@@ -55,12 +55,18 @@ async function main() {
     giftsHighlight: L((d) => d.giftSets.highlight), giftsImage: giftImg,
     workTitle: L((d) => d.ourWork.title), workSubtitle: L((d) => d.ourWork.subtitle), workIntro: L((d) => d.ourWork.intro), workFeatureImage: workImg,
     ctaTitle: L((d) => d.cta.title), ctaDescription: L((d) => d.cta.description), ctaImage: ctaImg,
-    contactPerson: pl.contact.person, contactRole: L((d) => d.contact.role),
-    contactEmail: pl.contact.email, contactPhone: pl.contact.phone, contactWebsite: pl.contact.website,
-    contactInstagram: 'https://instagram.com/in2scentedart/', contactFacebook: 'https://facebook.com/in2scentedart/',
   };
   await client.createOrReplace(siteContent);
   console.log('  siteContent seeded.');
+
+  console.log('Building contactInfo...');
+  await client.createOrReplace({
+    _id: 'contactInfo', _type: 'contactInfo',
+    person: pl.contact.person, role: L((d) => d.contact.role),
+    email: pl.contact.email, phone: pl.contact.phone, website: pl.contact.website,
+    instagram: 'https://instagram.com/in2scentedart/', facebook: 'https://facebook.com/in2scentedart/',
+  });
+  console.log('  contactInfo seeded.');
 
   console.log('Creating portfolio projects...');
   const projSpecs = [
