@@ -7,7 +7,7 @@ const SINGLETONS = ['siteContent'];
 export default defineConfig({
   name: 'in2branding',
   title: 'IN2 Branding — Administrare',
-  projectId: 'lyqvrbbh',
+  projectId: 'nd73gga6',
   dataset: 'production',
   plugins: [
     structureTool({
