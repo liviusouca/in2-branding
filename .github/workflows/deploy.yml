@@ -1,0 +1,38 @@
+name: Build & Deploy (Sanity → Cloudflare Pages)
+
+# Triggered by:
+#  - repository_dispatch: sent by the Sanity webhook when content is published
+#  - workflow_dispatch: manual "Run workflow" button in GitHub
+#  - push to main: code changes
+on:
+  repository_dispatch:
+    types: [sanity-publish]
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Build (sync content from Sanity, then Astro build)
+        env:
+          SANITY_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID }}
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
+        run: npm run build
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=in2branding --branch=main --commit-dirty=true
