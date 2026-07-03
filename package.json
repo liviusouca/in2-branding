@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "sync": "node scripts/sanity-sync.mjs",
+    "build": "node scripts/sanity-sync.mjs && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

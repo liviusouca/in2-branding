@@ -1,0 +1,72 @@
+[
+  {
+    "image": "project-0.jpg",
+    "featured": true,
+    "title": {
+      "pl": "Powerbank, kubek termiczny i zestaw narzędzi",
+      "en": "Branded powerbank, tumbler and tool set",
+      "ro": "Powerbank, cană termică și set de scule"
+    },
+    "description": {
+      "pl": "",
+      "en": "",
+      "ro": ""
+    }
+  },
+  {
+    "image": "project-1.jpg",
+    "featured": false,
+    "title": {
+      "pl": "Notes, długopis, butelka i kosmetyczka",
+      "en": "Notebook, pen, bottle and pouch",
+      "ro": "Agendă, pix, sticlă și trusă cosmetică"
+    },
+    "description": {
+      "pl": "",
+      "en": "",
+      "ro": ""
+    }
+  },
+  {
+    "image": "project-2.jpg",
+    "featured": false,
+    "title": {
+      "pl": "Ekskluzywny zestaw prezentowy",
+      "en": "Curated premium gift set",
+      "ro": "Set cadou premium curatoriat"
+    },
+    "description": {
+      "pl": "",
+      "en": "",
+      "ro": ""
+    }
+  },
+  {
+    "image": "project-3.jpg",
+    "featured": false,
+    "title": {
+      "pl": "Firmowe pudełko prezentowe IN2",
+      "en": "Signature IN2 gift box",
+      "ro": "Cutie cadou IN2 personalizată"
+    },
+    "description": {
+      "pl": "",
+      "en": "",
+      "ro": ""
+    }
+  },
+  {
+    "image": "project-4.jpg",
+    "featured": false,
+    "title": {
+      "pl": "Szkice koncepcji produktów zapachowych",
+      "en": "Concept sketches for scented products",
+      "ro": "Schițe de concept pentru produse parfumate"
+    },
+    "description": {
+      "pl": "",
+      "en": "",
+      "ro": ""
+    }
+  }
+]

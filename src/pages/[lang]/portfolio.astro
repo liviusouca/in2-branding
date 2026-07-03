@@ -5,11 +5,7 @@ import Divider from '../../components/Divider.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
 import { useTranslations, locales, type Lang } from '../../i18n/utils';
 import ourWork from '../../assets/our-work.jpg';
-import whoImg from '../../assets/who-we-are.jpg';
-import whyImg from '../../assets/why-in2.jpg';
-import giftImg from '../../assets/gift-sets.jpg';
-import howImg from '../../assets/how-we-work.jpg';
-import letsImg from '../../assets/lets-create.jpg';
+import projects from '../../data/projects.json';
 
 export function getStaticPaths() {
   return locales.map((lang) => ({ params: { lang } }));
@@ -18,13 +14,14 @@ export function getStaticPaths() {
 const lang = Astro.params.lang as Lang;
 const t = useTranslations(lang);
 
-const gallery = [
-  { src: whoImg, alt: 'Branded powerbank, tumbler and premium tool set' },
-  { src: whyImg, alt: 'Branded notebook, pen, bottle and cosmetic pouch' },
-  { src: giftImg, alt: 'Curated premium gift set in branded packaging' },
-  { src: howImg, alt: 'Concept sketches for scented branded products' },
-  { src: letsImg, alt: 'Signature IN2 gift box with ribbon' },
-];
+// Project cover images synced from Sanity into src/assets/projects/.
+const projImgs = import.meta.glob<{ default: ImageMetadata }>(
+  '../../assets/projects/*.jpg',
+  { eager: true }
+);
+const coverOf = (file: string) => projImgs[`../../assets/projects/${file}`]?.default;
+type Proj = { image: string; featured: boolean; title: Record<string, string>; description: Record<string, string> };
+const items = (projects as Proj[]).filter((p) => coverOf(p.image));
 ---
 <Layout lang={lang} route="portfolio" title={t.seo.portfolio.title} description={t.seo.portfolio.description}>
   <section class="section section--cream pagehead">
@@ -42,14 +39,17 @@ const gallery = [
   <section class="section section--cream" style="padding-top:0">
     <div class="wrap">
       <figure class="feature reveal">
-        <Image src={ourWork} alt="Line-up of premium branded products by IN2" widths={[720, 1100, 1440]} sizes="(max-width: 1200px) 92vw, 1200px" />
+        <Image src={ourWork} alt="IN2 Branding" widths={[720, 1100, 1440]} sizes="(max-width: 1200px) 92vw, 1200px" />
         <figcaption>{t.ourWork.intro}</figcaption>
       </figure>
 
       <div class="grid">
-        {gallery.map((g) => (
+        {items.map((p) => (
           <figure class="tile reveal">
-            <Image src={g.src} alt={g.alt} widths={[360, 560, 760]} sizes="(max-width: 700px) 92vw, 30vw" />
+            <Image src={coverOf(p.image)!} alt={p.title[lang] || p.title.en} widths={[360, 560, 760]} sizes="(max-width: 700px) 92vw, 30vw" />
+            {(p.title[lang] || p.title.en) && (
+              <figcaption class="tile__cap">{p.title[lang] || p.title.en}</figcaption>
+            )}
           </figure>
         ))}
       </div>
@@ -70,9 +70,18 @@ const gallery = [
   }
 
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 1.5rem; }
-  .tile { margin: 0; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--line-soft); background: var(--cream-2); }
+  .tile {
+    margin: 0; overflow: hidden; border-radius: var(--radius);
+    border: 1px solid var(--line-soft); background: var(--cream-2); position: relative;
+  }
   .tile :global(img) { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.7s var(--ease); }
   .tile:hover :global(img) { transform: scale(1.05); }
+  .tile__cap {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 1.6rem 1rem 0.8rem;
+    background: linear-gradient(to top, rgba(23,19,16,0.72), transparent);
+    color: #fff; font-family: var(--serif); font-size: 1.05rem; line-height: 1.25;
+  }
   .grid .tile:first-child { grid-column: span 2; }
 
   @media (max-width: 760px) {

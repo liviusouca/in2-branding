@@ -13,10 +13,22 @@
     "cta": "Rozpocznij projekt"
   },
   "seo": {
-    "home": { "title": "IN2 Branding — Ekskluzywne prezenty firmowe i produkty z logo Twojej marki", "description": "Luksusowe rozwiązania co-brandingowe, starannie dobrane zestawy prezentowe oraz produkty premium stworzone z myślą o Twojej marce." },
-    "howWeWork": { "title": "Jak pracujemy — IN2 Branding", "description": "Wy mówicie nam o pomyśle, wizji i budżecie — my zamieniamy to w rzeczywistość: produkt, branding i opakowanie. Zajmujemy się wszystkim od pomysłu do wykonania." },
-    "portfolio": { "title": "Przykłady naszych realizacji — IN2 Branding", "description": "Przemyślany branding. Produkty premium. Prawdziwy efekt. Przykłady realizacji IN2 Branding." },
-    "contact": { "title": "Skontaktuj się z nami — IN2 Branding", "description": "Opowiedz nam o swojej wizji. Przygotujemy w pełni spersonalizowane, premium rozwiązanie marketingowe dopasowane do Twojej marki." }
+    "home": {
+      "title": "IN2 Branding — Ekskluzywne prezenty firmowe i produkty z logo Twojej marki",
+      "description": "Luksusowe rozwiązania co-brandingowe, starannie dobrane zestawy prezentowe oraz produkty premium stworzone z myślą o Twojej marce."
+    },
+    "howWeWork": {
+      "title": "Jak pracujemy — IN2 Branding",
+      "description": "Wy mówicie nam o pomyśle, wizji i budżecie — my zamieniamy to w rzeczywistość: produkt, branding i opakowanie. Zajmujemy się wszystkim od pomysłu do wykonania."
+    },
+    "portfolio": {
+      "title": "Przykłady naszych realizacji — IN2 Branding",
+      "description": "Przemyślany branding. Produkty premium. Prawdziwy efekt. Przykłady realizacji IN2 Branding."
+    },
+    "contact": {
+      "title": "Skontaktuj się z nami — IN2 Branding",
+      "description": "Opowiedz nam o swojej wizji. Przygotujemy w pełni spersonalizowane, premium rozwiązanie marketingowe dopasowane do Twojej marki."
+    }
   },
   "hero": {
     "kicker": "IN2 Branding",
@@ -28,10 +40,18 @@
   "whoWeAre": {
     "title": "Kim jesteśmy",
     "items": [
-      { "text": "Jesteśmy polską firmą specjalizującą się w tworzeniu wysokiej jakości produktów marketingowych dopasowanych do wizji naszych klientów." },
-      { "text": "W IN2 Branding działamy jako zewnętrzny partner marketingowy — pomagamy firmom zmieniać pomysły w piękne gadżety, które klienci naprawdę chcą zachować i używać." },
-      { "text": "W przeciwieństwie do większości dostawców gadżetów my nie jesteśmy nastawieni na tanie, masowe produkty. Jesteśmy przekonani, że niska jakość produktów marketingowych może szkodzić Państwa marce — na dzisiejszym rynku tanie smycze i jednorazowe gadżety nie są już skutecznym narzędziem marketingowym — są antyreklamą." },
-      { "text": "Współpracujemy wyłącznie ze starannie wyselekcjonowanymi producentami premium, oferujemy przemyślane techniki personalizacji oraz dopracowane rozwiązania opakowaniowe, które podkreślają wartość Twojej marki na każdym etapie." }
+      {
+        "text": "Jesteśmy polską firmą specjalizującą się w tworzeniu wysokiej jakości produktów marketingowych dopasowanych do wizji naszych klientów."
+      },
+      {
+        "text": "W IN2 Branding działamy jako zewnętrzny partner marketingowy — pomagamy firmom zmieniać pomysły w piękne gadżety, które klienci naprawdę chcą zachować i używać."
+      },
+      {
+        "text": "W przeciwieństwie do większości dostawców gadżetów my nie jesteśmy nastawieni na tanie, masowe produkty. Jesteśmy przekonani, że niska jakość produktów marketingowych może szkodzić Państwa marce — na dzisiejszym rynku tanie smycze i jednorazowe gadżety nie są już skutecznym narzędziem marketingowym — są antyreklamą."
+      },
+      {
+        "text": "Współpracujemy wyłącznie ze starannie wyselekcjonowanymi producentami premium, oferujemy przemyślane techniki personalizacji oraz dopracowane rozwiązania opakowaniowe, które podkreślają wartość Twojej marki na każdym etapie."
+      }
     ],
     "highlight": "Wierzymy, że silne marki zasługują na więcej niż jednorazowe gadżety."
   },
@@ -49,8 +69,14 @@
   "howWeWork": {
     "title": "Jak pracujemy",
     "steps": [
-      { "title": "Wy dzielicie się pomysłem", "text": "Wy mówicie nam o swoim pomyśle, wizji oraz budżecie dla projektu." },
-      { "title": "My realizujemy projekt", "text": "My ten pomysł zamieniamy w rzeczywistość: proponujemy odpowiedni do założeń produkt, zajmujemy się brandingiem, projektujemy opakowanie. Zajmujemy się wszystkim od pomysłu do wykonania." }
+      {
+        "title": "Wy dzielicie się pomysłem",
+        "text": "Wy mówicie nam o swoim pomyśle, wizji oraz budżecie dla projektu."
+      },
+      {
+        "title": "My realizujemy projekt",
+        "text": "My ten pomysł zamieniamy w rzeczywistość: proponujemy odpowiedni do założeń produkt, zajmujemy się brandingiem, projektujemy opakowanie. Zajmujemy się wszystkim od pomysłu do wykonania."
+      }
     ]
   },
   "giftSets": {
@@ -103,13 +129,34 @@
     "fallback": "Nie mam jeszcze dobrej odpowiedzi na to pytanie. W każdej konkretnej sprawie chętnie pomoże Aleksandra Stan: Sales@in2branding.pl lub +48 509 919 558. Możesz też wybrać jedno z pytań poniżej.",
     "disclaimer": "Automatyczny asystent — po indywidualną ofertę skontaktuj się z nami bezpośrednio.",
     "suggestions": [
-      { "label": "Czym się zajmujecie?", "query": "czym sie zajmujecie what do you do" },
-      { "label": "Techniki brandingu", "query": "ktora technika which branding technique" },
-      { "label": "Minimalne zamówienie", "query": "minimalne zamowienie minimum order" },
-      { "label": "Czas realizacji", "query": "czas realizacji lead time" },
-      { "label": "Zestawy prezentowe", "query": "zestawy prezentowe gift sets" },
-      { "label": "Ekologia", "query": "czy jestescie eko sustainable" },
-      { "label": "Wycena", "query": "wycena get a quote" }
+      {
+        "label": "Czym się zajmujecie?",
+        "query": "czym sie zajmujecie what do you do"
+      },
+      {
+        "label": "Techniki brandingu",
+        "query": "ktora technika which branding technique"
+      },
+      {
+        "label": "Minimalne zamówienie",
+        "query": "minimalne zamowienie minimum order"
+      },
+      {
+        "label": "Czas realizacji",
+        "query": "czas realizacji lead time"
+      },
+      {
+        "label": "Zestawy prezentowe",
+        "query": "zestawy prezentowe gift sets"
+      },
+      {
+        "label": "Ekologia",
+        "query": "czy jestescie eko sustainable"
+      },
+      {
+        "label": "Wycena",
+        "query": "wycena get a quote"
+      }
     ]
   }
 }
