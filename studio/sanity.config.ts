@@ -3,6 +3,7 @@ import { structureTool } from 'sanity/structure';
 import { assist } from '@sanity/assist';
 import { languageFilter } from '@sanity/language-filter';
 import { schemaTypes } from './schemaTypes';
+import { StudioLayout } from './StudioLayout';
 
 const SINGLETONS = ['siteContent', 'contactInfo'];
 
@@ -11,6 +12,9 @@ export default defineConfig({
   title: 'IN2 Branding — Administrare',
   projectId: 'nd73gga6',
   dataset: 'production',
+  studio: {
+    components: { layout: StudioLayout },
+  },
   plugins: [
     // Language selector: pick the editing language, hide the others.
     languageFilter({
