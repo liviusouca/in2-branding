@@ -23,6 +23,7 @@ export default defineConfig({
         { id: 'en', title: 'English' },
         { id: 'ro', title: 'Română' },
       ],
+      defaultLanguages: [],
       documentTypes: ['siteContent', 'contactInfo', 'project', 'chatEntry'],
       filterField: (enclosingType, member, selectedLanguageIds) =>
         !enclosingType.name.startsWith('locale') ||
