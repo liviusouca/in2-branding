@@ -1,6 +1,7 @@
 import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
 import { assist } from '@sanity/assist';
+import { languageFilter } from '@sanity/language-filter';
 import { schemaTypes } from './schemaTypes';
 
 const SINGLETONS = ['siteContent', 'contactInfo'];
@@ -11,6 +12,20 @@ export default defineConfig({
   projectId: 'nd73gga6',
   dataset: 'production',
   plugins: [
+    // Language selector: pick the editing language, hide the others.
+    languageFilter({
+      supportedLanguages: [
+        { id: 'pl', title: 'Polski' },
+        { id: 'en', title: 'English' },
+        { id: 'ro', title: 'Română' },
+      ],
+      defaultLanguages: ['pl'],
+      documentTypes: ['siteContent', 'contactInfo', 'project', 'chatEntry'],
+      filterField: (enclosingType, member, selectedLanguageIds) =>
+        !enclosingType.name.startsWith('locale') ||
+        !('name' in member) ||
+        selectedLanguageIds.includes(member.name),
+    }),
     // AI translation: edit one language, auto-translate to the others.
     assist({
       translate: {
