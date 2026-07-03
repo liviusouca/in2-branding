@@ -10,31 +10,30 @@ export function StudioLayout(props: LayoutProps) {
         [data-ui="Button"]:has(svg[data-sanity-icon="translate"]),
         button:has(svg[data-sanity-icon="translate"]) {
           background-color: #16a34a !important;
-          color: #ffffff !important;
           border-radius: 7px !important;
-        }
-        [data-ui="Button"]:has(svg[data-sanity-icon="translate"]) svg,
-        button:has(svg[data-sanity-icon="translate"]) svg {
-          color: #ffffff !important;
+          justify-content: center !important;
+          text-align: center !important;
         }
         [data-ui="Button"]:has(svg[data-sanity-icon="translate"]):hover,
         button:has(svg[data-sanity-icon="translate"]):hover {
           background-color: #15803d !important;
         }
-        /* Hide the default "Showing all / Showing: …" text */
-        [data-ui="Button"]:has(svg[data-sanity-icon="translate"]) [data-ui="Text"],
-        button:has(svg[data-sanity-icon="translate"]) [data-ui="Text"] {
+        /* Hide the default inner content (translate icon + "Showing all" text) */
+        [data-ui="Button"]:has(svg[data-sanity-icon="translate"]) > *,
+        button:has(svg[data-sanity-icon="translate"]) > * {
           display: none !important;
         }
-        /* Add custom label */
+        /* Centered custom label */
         [data-ui="Button"]:has(svg[data-sanity-icon="translate"])::after,
         button:has(svg[data-sanity-icon="translate"])::after {
           content: "Alege limba de editare";
+          display: block;
+          width: 100%;
+          text-align: center;
           color: #ffffff;
           font-size: 13px;
           font-weight: 500;
           white-space: nowrap;
-          margin-left: 6px;
         }
       `}</style>
       {props.renderDefault(props)}
